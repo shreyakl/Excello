@@ -55,7 +55,7 @@ if($this->session->flashdata('errors'))
 }
 ?>
 
-<?php echo form_open('user/login');?>
+<?php echo form_open('index.php/user/login');?>
 <div class="form-group">
 <label>Username</label><br>
 <input type="text" name="username" placeholder=" Username" class="form_control">
@@ -70,6 +70,7 @@ if($this->session->flashdata('errors'))
 </div>
 </body>
 
+
 </html>
 
 <!--<!DOCTYPE html>
@@ -80,6 +81,7 @@ if($this->session->flashdata('errors'))
 @import url(http://fonts.googleapis.com/css?family=Roboto);
 
 /****** LOGIN MODAL ******/
+
 .loginmodal-container {
   padding: 30px;
   max-width: 350px;
