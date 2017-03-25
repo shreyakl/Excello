@@ -2,7 +2,22 @@
 
 class User_model extends CI_Model
 {
+public function insertUser($data)
+{
+	$config['hostname']="localhost";
+	$config['username']="root";
+	$config['password']="";
+	$config['database']="errand";
+	$config['dbdriver'] = 'mysqli';
 
+	
+	$db1=$this->load->database($config,TRUE);
+	//$this->db->query('INSERT id,username,password VALUES '' INTO users');
+
+	//$db1->insert('users',$data);
+
+	return true;
+}
 
 /*
 public function get_user($user_id)
@@ -33,22 +48,8 @@ public function get_user($user_id)
 	return $q->result();
 	
 
-}
-public function insert_users($data)
-{
-	$config['hostname']="localhost";
-	$config['username']="root";
-	$config['password']="";
-	$config['database']="errand";
-	$config['dbdriver'] = 'mysqli';
-
-	
-	$db1=$this->load->database($config,TRUE);
-
-	$db1->insert('users',$data);
-
-
-}
+}*/
+/*
 public function delete_users($id)
 {
 	$config['hostname']="localhost";
