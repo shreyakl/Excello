@@ -10,7 +10,7 @@
        public function getview($usid)
        {
         $this->load->model('vol_list');
-        $data=$this->vol_list->gettask(4);
+        $data=$this->vol_list->gettask($usid);
         $this->session->set_userdata('task',$data);
        	$this->load->view('mark_volunteer');
        }
