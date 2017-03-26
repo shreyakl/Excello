@@ -68,7 +68,7 @@ class User extends CI_Controller
 											   );
 							$this->session->set_userdata('user',$user_data);
 							if($user->type=='c')
-								redirect('index.php/core');
+								redirect('index.php/core/getview'.$user->id);
 							elseif ($user->type=='h'&&$user->team=='marketing')
 							{
 								redirect('index.php/loadtemplate/getview/'.$user->id);
