@@ -47,7 +47,8 @@
           </style>
       </head>
       <body class="skin-black">
-      <?php echo $this->session->flashdata('verify_message');?>
+      <?php echo $this->session->flashdata('verify_message');
+       $usid=$this->session->userdata('user');?>
         <!-- header logo: style can be found in header.less -->
         <header class="header">
             <a href="<?php echo base_url();?>index.php/loadtemplate/" class="logo">
