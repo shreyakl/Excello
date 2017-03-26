@@ -48,7 +48,7 @@
       </head>
       <body class="skin-black">
       <?php echo $this->session->flashdata('verify_message');
-       $usid=$this->session->userdata('user');?>
+       $user=$this->session->userdata('user');?>
         <!-- header logo: style can be found in header.less -->
         <header class="header">
             <a href="<?php echo base_url();?>index.php/loadtemplate/" class="logo">
@@ -442,16 +442,16 @@
                                           
                                           <div class="task-title">
                                               <span class="task-title-sp"><?php echo $obj1->action.' - '.$obj1->region; ?></span>
-                                              <?php if ($obj1->done==1) {
+                                              <?php if ($obj1->done!=0) {
                                             
                                                 
                                                  echo '<span class="label label-success">Completed</span>';
 
                                               }
                                               else{
-                                                echo '<span class="label label-danger">To do</span>';
-                                                echo ' <a href=setdone/'.$obj1->tid.'>done</a>';
-                                              }
+                                                echo '<span class="label label-danger">To do</span>';?>
+                                                 <a href="<?php echo base_url();?>index.php/marketing/setdone/<?php echo $obj1->tid?>/<?php echo $user?>">done</a>
+                                              <?php }
 
                                                 ?>
                                                 <a href=""></a>
