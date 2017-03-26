@@ -45,7 +45,7 @@ class User extends CI_Controller
 							'errors' => validation_errors()
 						);
 			$this->session->set_flashdata($data);
-			redirect('home');
+			redirect('index.php/home');
 		}
 
 		else
