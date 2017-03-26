@@ -53,7 +53,8 @@ public function registration()
                // 'lname' => $this->input->post('lname'),
                // 'email' => $this->input->post('email'),
                 'password' => $this->input->post('password'),
-                'team' => 'marketing'
+                'team' => 'marketing',
+                'type'=>'v'
                // 'class' => $this->input->post('class'),
                // 'region' => $this->input->post('region'),
                // 'phone' => $this->input->post('phone'),

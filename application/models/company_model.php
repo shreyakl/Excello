@@ -8,7 +8,7 @@ class Company_model  extends CI_Model
 	}
 	public function getmembers()
 	{
-		$data=$this->db->query('SELECT id,username FROM users');
+		$data=$this->db->query('SELECT id,username FROM users WHERE team=\'marketing\'');
 		return $data->result();
 	}
     public function gettask()

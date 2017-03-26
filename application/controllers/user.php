@@ -56,23 +56,40 @@ class User extends CI_Controller
 					
 			
 						$user_id=$this->user_model->login_user($username,$password);
-						
-						if($user_id)
+						echo $user_id->type;
+						if($user_id->id)
 						{
-
+							echo "string";
 							$user_data = array(
 
-													'user_id' => $user_id,
+													'user_id' => $user_id->id,
 													'username' => $username,
 													'logged_in'=> TRUE
 											   );
-							$this->session->set_userdata($user_data);
-							$this->load->view('basic_form');
+							$this->session->set_userdata('user',$user_data);
+							if($user_id->type=='c')
+								redirect('index.php/core');
+							elseif ($user_id->type=='h'&&$user_id->team=='marketing')
+							{
+								redirect('index.php/loadtemplate');
+							}
+							elseif ($user_id->type=='h'&&$user_id->team=='initiative')
+							{
+								redirect('index.php/initiatives_cont');
+							}
+							elseif ($user_id->type=='v'&&$user_id->team=='marketing')
+							{
+								redirect('index.php/marketing/getview');
+							}
+							elseif ($user_id->type=='v'&&$user_id->team=='initiatives')
+							{
+								//redirect('marketing/getview');
+							}
 
 						}
 						else
 						{
-							redirect('home');
+							redirect('index.php/home');
 						}
 
 		}

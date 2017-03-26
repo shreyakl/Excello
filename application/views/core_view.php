@@ -613,19 +613,19 @@
                         <div class="col-md-5">
                             <div class="panel">
                                 <header class="panel-heading">
-                                    Teammates
+                                    Team Heads
                                 </header>
 
                                 <ul class="list-group teammates">
                                  <?php 
-                                 //$this->company_model->getmembers();      //$result=$data['result'];
+                                 //$this->core-model->gethead();      //$result=$data['result'];
                                  $data=$this->session->userdata('users');
                                  
                                  foreach($data as $obj): ?>
                                     <li class="list-group-item">
                                         <a href=""><img src="img/26115.jpg" width="50" height="50"></a>
                                        <!-- <span class="pull-right label label-danger inline m-t-15"></span>-->
-                                        <a href=""><?php echo $obj->username ;?></a>
+                                        <a href=""><?php echo $obj->username.'-'.$obj->team;?></a>
                                     </li>
                                      <?php endforeach; ?>
                                     <!--<li class="list-group-item">
@@ -653,7 +653,7 @@
                                     <!-- <span class="pull-right badge badge-info">32</span> -->
                                     <button class="btn btn-primary btn-addon btn-sm" data-toggle="modal" data-target="#myregistration">
                                         <i class="fa fa-plus"></i>
-                                        Add Teammate
+                                        Add Head
                                     </button>
 
                                              <div id="myregistration" class="modal fade in" role="dialog">
@@ -666,7 +666,7 @@
                                                     <h4 class="modal-title">Member Details</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/loadtemplate/registration" method="post">
+                                                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/core/registration" method="post">
 
                                                         <div class="form-group col-sm-12">
                                                             <input type="text" class="form-control" name="fname" id="name" placeholder="Enter FirstName">
@@ -682,7 +682,7 @@
                                                             </div>
                                                         
                                                         <div class="form-group col-sm-12">
-                                                            <input type="text" class="form-control" name="region" id="cheeckin" placeholder="Region to Visit">
+                                                            <input type="text" class="form-control" name="team" id="cheeckin" placeholder="Enter your team">
                                                             
                                                         </div>
                                                         <div class="form-group col-sm-12">

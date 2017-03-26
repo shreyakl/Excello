@@ -82,9 +82,10 @@ public function login_user($username,$password)
 
 	if($result->num_rows()==1)
 	{
-		 return $result->row(0)->id;
+		 return $result->result();
 		
 	}
+	//return false;
 }
 
 }
