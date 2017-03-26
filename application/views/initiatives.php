@@ -48,7 +48,7 @@
       </head>
       <body class="skin-black">
       <?php echo $this->session->flashdata('verify_message');
-      		$user=$this->session->userdata('user');
+      		$usid=$this->session->userdata('usid');
       ?>
         <!-- header logo: style can be found in header.less -->
         <header class="header">
@@ -366,7 +366,7 @@
                    		<div class="panel">
 		                    <header class="panel-heading">Post an Idea
 		                    </header>
-		                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/initiatives_cont/addidea/" method="post">
+		                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/initiatives_cont/addidea/<?php echo $usid?>" method="post">
                                     
 		                    <textarea class="" placeholder="Write a comment…" name="idea" style="width:100%;height:150px" dir="auto" ></textarea><br></br>
 
@@ -386,7 +386,7 @@
 	                        	</div>
 	                        	<div class="col-sm-10"></div>
 	                        	<div class="col-md-1">
-	                        		 <a href=<?php echo base_url().'index.php/initiatives_cont/voteinc/'.$user.'/'.$object->id?> >
+	                        		 <a href=<?php echo base_url().'index.php/initiatives_cont/voteinc/'.$usid.'/'.$object->id?> >
                                 <i class="fa fa-thumbs-up"></i>
                            		</a>
                            		
@@ -442,7 +442,7 @@
                                             <h4 class="modal-title">Member Details</h4>
                                         </div>
                                         <div class="modal-body">
-                                            <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/loadtemplate/registration" method="post">
+                                            <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/initiatives_cont/registration/<?php echo $usid?>" method="post">
 
                                                 <div class="form-group col-sm-12">
                                                     <input type="text" class="form-control" name="fname" id="name" placeholder="Enter FirstName">

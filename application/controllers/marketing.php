@@ -12,15 +12,16 @@
         $this->load->model('vol_list');
         $data=$this->vol_list->gettask($usid);
         $this->session->set_userdata('task',$data);
+        $this->session->set_userdata('user',$usid);
        	$this->load->view('mark_volunteer');
        }
-        public function setdone($tid)
+        public function setdone($tid,$user)
        {
 
         $this->load->model('vol_list');
         //$this->load->controller('marketing');
         $this->vol_list->setdone($tid);
-        redirect(base_url().'index.php/marketing/getview');
+        redirect(base_url().'index.php/marketing/getview/'.$user);
         //$data=$this->vol_list->gettask(4);
         //$this->session->set_userdata('task',$data);
         //$this->load->view('mark_volunteer');
