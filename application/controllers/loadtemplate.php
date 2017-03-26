@@ -125,7 +125,7 @@ public function registration()
 
                 'action' => $this->input->post('action'),
                
-                'team' => $this->input->post('team'),
+                'region' => $this->input->post('team'),
 
           
             );
@@ -154,7 +154,7 @@ public function registration()
         //set validation rules
         $this->form_validation->set_rules('Name', 'Company Name', 'trim|required');
         $this->form_validation->set_rules('Region', 'Region', 'trim|required|alpha');
-        $this->form_validation->set_rules('Email', 'Email ID', 'trim|valid_email|is_unique[user.email]');
+        $this->form_validation->set_rules('Email', 'Email ID', 'trim|valid_email');
         $this->form_validation->set_rules('Address','Contact Details','required');
        // $this->form_validation->set_rules('cpassword', 'Confirm Password', 'trim|required');
         

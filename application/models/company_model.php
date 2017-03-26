@@ -13,7 +13,7 @@ class Company_model  extends CI_Model
 	}
     public function gettask()
     {
-    	$data=$this->db->query('SELECT action,team,done FROM task');
+    	$data=$this->db->query('SELECT action,region,done FROM task');
 		return $data->result();
     }
 
