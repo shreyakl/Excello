@@ -7,7 +7,7 @@
        {
           //$this->load->view('mark_volunteer');
        }
-       public function getview()
+       public function getview($usid)
        {
         $this->load->model('vol_list');
         $data=$this->vol_list->gettask(4);

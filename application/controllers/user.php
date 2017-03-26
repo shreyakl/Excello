@@ -55,33 +55,33 @@ class User extends CI_Controller
 							$password = $this->input->post('password');
 					
 			
-						$user_id=$this->user_model->login_user($username,$password);
-						echo $user_id->type;
-						if($user_id->id)
+						$user=$this->user_model->login_user($username,$password);
+						echo $user->type;
+						if($user->id)
 						{
 							echo "string";
 							$user_data = array(
 
-													'user_id' => $user_id->id,
+													'user_id' => $user->id,
 													'username' => $username,
 													'logged_in'=> TRUE
 											   );
 							$this->session->set_userdata('user',$user_data);
-							if($user_id->type=='c')
+							if($user->type=='c')
 								redirect('index.php/core');
-							elseif ($user_id->type=='h'&&$user_id->team=='marketing')
+							elseif ($user->type=='h'&&$user->team=='marketing')
 							{
-								redirect('index.php/loadtemplate');
+								redirect('index.php/loadtemplate/getview/'.$user->id);
 							}
-							elseif ($user_id->type=='h'&&$user_id->team=='initiative')
+							elseif ($user->type=='h'&&$user->team=='initiatives')
 							{
-								redirect('index.php/initiatives_cont');
+								redirect('index.php/initiatives_cont/loadinitiatives/'.$user->id);
 							}
-							elseif ($user_id->type=='v'&&$user_id->team=='marketing')
+							elseif ($user->type=='v'&&$user->team=='marketing')
 							{
-								redirect('index.php/marketing/getview');
+								redirect('index.php/marketing/getview/'.$user->id);
 							}
-							elseif ($user_id->type=='v'&&$user_id->team=='initiatives')
+							elseif ($user->type=='v'&&$user->team=='initiatives')
 							{
 								//redirect('marketing/getview');
 							}

@@ -2,9 +2,12 @@
 
 class loadtemplate extends CI_Controller
 {
-
-	
 public function index()
+{
+    
+}
+	
+public function getview($usid)
 {
     $this->load->model('company_model');
     $task=$this->company_model->gettask();
