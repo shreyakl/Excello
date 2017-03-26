@@ -6,7 +6,7 @@ class core extends CI_Controller
 
 	}
 
-	public function getview()
+	public function getview($usid)
 	{
        $this->load->model('core_model');
        $data=$this->core_model->gethead();

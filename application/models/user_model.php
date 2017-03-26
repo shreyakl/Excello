@@ -74,7 +74,7 @@ public function login_user($username,$password)
 		if(($usr->username == $username)&&($usr->password == $password))
 			return TRUE;
 	}
-	return FALSE;*/
+	return FALSE;
 
 	$this->db->where('username',$username);
 	$this->db->where('password',$password);
@@ -84,8 +84,21 @@ public function login_user($username,$password)
 	{
 		 return $result->result();
 		
-	}
-	//return false;
+	}*/
+	$query = $this->db->query('SELECT * FROM users');
+
+		foreach ($query->result() as $row)
+		{
+      	  
+      	  if($row->username==$username)
+      	  {
+      	  	if($row->password==$password)
+
+      	  		//echo $row->sid;
+      	  		return $row;
+      	  }
+		}
+	return false;
 }
 
 }
