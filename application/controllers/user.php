@@ -87,7 +87,7 @@ class User extends CI_Controller
 							}
 							elseif ($user->type=='h'&&$user->team=='publicity')
 							{
-								//redirect('marketing/getview');
+								redirect('index.php/copy/getview/'.$user->id);
 							}
 							elseif ($user->type=='v'&&$user->team=='publicity')
 							{

@@ -50,9 +50,9 @@
       <?php echo $this->session->flashdata('verify_message');?>
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="#" class="logo">
-                Marketing
-            </a>
+            <a href="<?php echo base_url();?>index.php/copy/" class="logo">
+               Head(Publicity)
+               </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
                 <!-- Sidebar toggle button-->
@@ -60,14 +60,197 @@
                 <div class="navbar-right">
                     <ul class="nav navbar-nav">
                         <!-- Messages: style can be found in dropdown.less-->
-                        
-                                                <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown messages-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-success">4</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 4 messages</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- start message -->
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/26115.jpg" class="img-circle" alt="User Image"/>
+                                                </div>
+                                                <h4>
+                                                    Support Team
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </a>
+                                        </li><!-- end message -->
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/26115.jpg" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Director Design Team
+
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> 2 hours</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Developers
+
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> Today</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/26115.jpg" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Sales Department
+
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <div class="pull-left">
+                                                    <img src="img/avatar.png" class="img-circle" alt="user image"/>
+                                                </div>
+                                                <h4>
+                                                    Reviewers
+
+                                                </h4>
+                                                <p>Why not buy a new awesome theme?</p>
+                                                <small class="pull-right"><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">See All Messages</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-tasks"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-success" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Create a nice theme
+                                                    <small class="pull-right">40%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-danger" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">40% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Some task I need to do
+                                                    <small class="pull-right">60%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-info" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                        <li><!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Make beautiful transitions
+                                                    <small class="pull-right">80%</small>
+                                                </h3>
+                                                <div class="progress progress-striped xs">
+                                                    <div class="progress-bar progress-bar-warning" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">80% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li><!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-power-off"></i>
-                                <span>Log Out <i class="caret"></i></span>
+                                <i class="fa fa-user"></i>
+                                <span>Jane Doe <i class="caret"></i></span>
                             </a>
-                           
+                            <ul class="dropdown-menu dropdown-custom dropdown-menu-right">
+                                <li class="dropdown-header text-center">Account</li>
+
+                                <li>
+                                    <a href="#">
+                                    <i class="fa fa-clock-o fa-fw pull-right"></i>
+                                        <span class="badge badge-success pull-right">10</span> Updates</a>
+                                    <a href="#">
+                                    <i class="fa fa-envelope-o fa-fw pull-right"></i>
+                                        <span class="badge badge-danger pull-right">5</span> Messages</a>
+                                    <a href="#"><i class="fa fa-magnet fa-fw pull-right"></i>
+                                        <span class="badge badge-info pull-right">3</span> Subscriptions</a>
+                                    <a href="#"><i class="fa fa-question fa-fw pull-right"></i> <span class=
+                                        "badge pull-right">11</span> FAQ</a>
+                                </li>
+
+                                <li class="divider"></li>
+
+                                    <li>
+                                        <a href="#">
+                                        <i class="fa fa-user fa-fw pull-right"></i>
+                                            Profile
+                                        </a>
+                                        <a data-toggle="modal" href="#modal-user-settings">
+                                        <i class="fa fa-cog fa-fw pull-right"></i>
+                                            Settings
+                                        </a>
+                                        </li>
+
+                                        <li class="divider"></li>
+
+                                        <li>
+                                            <a href="#"><i class="fa fa-ban fa-fw pull-right"></i> Logout</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </div>
                     </nav>
                 </header>
@@ -79,34 +262,30 @@
                             <!-- Sidebar user panel -->
                             <div class="user-panel">
                                 <div class="pull-left image">
-                                   <!-- <img src="img/26115.jpg" class="img-circle" alt="User Image" />-->
+                                    <img src="img/26115.jpg" class="img-circle" alt="User Image" />
                                 </div>
                                 <div class="pull-left info">
-                                    
+                                    <p>Hello, Jane</p>
 
-                                    <a href="#"><i class="fa fa-circle text-success"></i> Volunteer</a>
+                                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                                 </div>
                             </div>
                             
                             <!-- sidebar menu: : style can be found in sidebar.less -->
                             <ul class="sidebar-menu">
                                 <li class="active">
-                                    <a href="<?php echo base_url();?>index.php/loadtemplate/">
+                                    <a href="<?php echo base_url();?>index.php/copy/">
                                         <i class="fa fa-dashboard"></i> <span>Home</span>
                                     </a>
                                 </li>
                                 <li>
-                                <?php
-                                $userid=$this->session->userdata('user');
-                                ?>
-
-                                    <a href="<?php echo base_url();?>index.php/marketing/companylist_vol/<?php echo $userid;?>">
-                                        <i class="fa fa-globe"></i> <span>Company list</span>
+                                    <a href="<?php echo base_url();?>index.php/copy/loadcompanylist">
+                                        <i class="fa fa-globe"></i> <span>Institute list</span>
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="<?php echo base_url();?>index.php/loadtemplate/loadcompanylist">
+                                    <a href="<?php echo base_url();?>index.php/copy/editcompanylist">
                                         <i class="fa fa-globe"></i> <span>Edit</span>
                                     </a>
                                 </li>
@@ -120,15 +299,15 @@
                                           <div class="modal-content">
                                               <div class="modal-header">
                                                   <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                                                  <h4 class="modal-title">Company Details</h4>
+                                                  <h4 class="modal-title">Institute Details</h4>
                                               </div>
                                               <div class="modal-body">
 
-                                                  <form role="form" action="<?php echo base_url();?>index.php/marketing/company_reg/<?php echo $userid;?>" method="post">
+                                                  <form role="form" action="<?php echo base_url();?>index.php/copy/company_reg/" method="post">
 
                                                   <div class="form-group">
-                                                          <label>Company Name</label>
-                                                          <input type="text" class="form-control" name="Name" id="name" placeholder="Enter Company">
+                                                          <label>Institution Name</label>
+                                                          <input type="text" class="form-control" name="Name" id="name" placeholder="Enter Institute">
                                                           <span class="text-danger"><?php echo form_error('Name');?></span>
                                                           
                                                       </div> 
@@ -136,6 +315,12 @@
                                                           <label>Region</label>
                                                           <input type="text" class="form-control" name="Region" id="name" placeholder="Enter Region">
                                                            <span class="text-danger"><?php echo form_error('Region');?></span>
+                                                          
+                                                      </div>
+                                                      <div class="form-group">
+                                                          <label>Event</label>
+                                                          <input type="text" class="form-control" name="Event" id="name" placeholder="Enter Event">
+                                                           
                                                           
                                                       </div>
                                                       <div class="form-group">
@@ -157,6 +342,8 @@
                                           </div>
                                       </div>
                                   </div>
+
+                            
 
                             </ul>
                         </section>
@@ -425,7 +612,108 @@
 
                    <!-- </div>-->
                     <div class="row">
+                        <div class="col-md-5">
+                            <div class="panel">
+                                <header class="panel-heading">
+                                    Teammates
+                                </header>
 
+                                <ul class="list-group teammates">
+                                 <?php 
+                                 //$this->company_model->getmembers();      //$result=$data['result'];
+                                 $data=$this->session->userdata('users');
+                                 
+                                 foreach($data as $obj): ?>
+                                    <li class="list-group-item">
+                                        <a href=""><img src="img/26115.jpg" width="50" height="50"></a>
+                                       <!-- <span class="pull-right label label-danger inline m-t-15"></span>-->
+                                        <a href=""><?php echo $obj->username ;?></a>
+                                    </li>
+                                     <?php endforeach; ?>
+                                    <!--<li class="list-group-item">
+                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <span class="pull-right label label-info inline m-t-15">Member</span>
+                                        <a href="">Joe Waston</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <span class="pull-right label label-warning inline m-t-15">Editor</span>
+                                        <a href="">Jannie Dvis</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <span class="pull-right label label-warning inline m-t-15">Editor</span>
+                                        <a href="">Emma Welson</a>
+                                    </li>
+                                    <li class="list-group-item">
+                                        <a href=""><img src="img/26115.jpg"  width="50" height="50"></a>
+                                        <span class="pull-right label label-success inline m-t-15">Subscriber</span>
+                                        <a href="">Emma Welson</a>
+                                    </li>-->
+                                </ul>
+                                <div class="panel-footer bg-white">
+                                    <!-- <span class="pull-right badge badge-info">32</span> -->
+                                    <button class="btn btn-primary btn-addon btn-sm" data-toggle="modal" data-target="#myregistration">
+                                        <i class="fa fa-plus"></i>
+                                        Add Teammate
+                                    </button>
+
+                                             <div id="myregistration" class="modal fade in" role="dialog">
+                                                <div class="modal-dialog">
+            
+                                            <!-- Modal content-->
+                                            <div class="modal-content row">
+                                                <div class="modal-header custom-modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">×</button>
+                                                    <h4 class="modal-title">Member Details</h4>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/copy/registration" method="post">
+
+                                                        <div class="form-group col-sm-12">
+                                                            <input type="text" class="form-control" name="fname" id="name" placeholder="Enter FirstName">
+                                                            <span class="text-danger"><?php echo form_error('fname'); ?></span>
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <input type="text" class="form-control" name="lname" id="name" placeholder="Enter LastName">
+                                                            <span class="text-danger"><?php echo form_error('lname'); ?></span>
+                                                            </div>
+                                                            <div class="form-group col-sm-12">
+                                                            <input type="text" class="form-control" name="class" id="name" placeholder="Enter Class">
+                                                            
+                                                            </div>
+                                                        
+                                                        <div class="form-group col-sm-12">
+                                                            <input type="text" class="form-control" name="region" id="cheeckin" placeholder="Region to Visit">
+                                                            
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email">
+                                                            <span class="text-danger"><?php echo form_error('email'); ?></span>
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <input type="password" class="form-control" name="password" id="cheeckout" placeholder="Set Password">
+                                                            <span class="text-danger"><?php echo form_error('password'); ?></span>
+                                                        </div>
+                                                        <div class="form-group col-sm-12">
+                                                            <input type="text" class="form-control" name="phone" id="phone" placeholder="Enter Phone">
+                                                            
+                                                        </div>
+                    
+                                                        <div class="form-group col-sm-12">
+                                                            <button type="submit" class="btn btn-default pull-right">Submit</button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                                
+                                            </div>
+                                            
+                                        </div>
+                                        </div>
+    
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-md-7">
                           <section class="panel tasks-widget">
                               <header class="panel-heading">
@@ -438,13 +726,17 @@
                                   <ul class="task-list">
                                   <?php 
                                  //$this->company_model->getmembers();      //$result=$data['result'];
-                                 $task=$this->session->userdata('task');
+                                 $task=$this->session->userdata('ptask');
                                  
                                  foreach($task as $obj1): ?>
                                       <li>
-                                          
+                                          <div class="task-checkbox">
+                                              <!-- <input type="checkbox" class="list-child" value=""  /> -->
+                                              <input type="checkbox" class="flat-grey list-child"/>
+                                              <!-- <input type="checkbox" class="square-grey"/> -->
+                                          </div>
                                           <div class="task-title">
-                                              <span class="task-title-sp"><?php echo $obj1->action.' - '.$obj1->region; ?></span>
+                                              <span class="task-title-sp"><?php echo $obj1->action.' - '.$obj1->team; ?></span>
                                               <?php if ($obj1->done==1) {
                                             
                                                 
@@ -453,11 +745,9 @@
                                               }
                                               else{
                                                 echo '<span class="label label-danger">To do</span>';
-                                                echo ' <a href=setdone/'.$obj1->tid.'>done</a>';
                                               }
-
                                                 ?>
-                                                <a href=""></a>
+
                                               <div class="pull-right hidden-phone">
                                                  <!-- <button class="btn btn-default btn-xs"><i class="fa fa-check"></i></button>
                                                   <button class="btn btn-default btn-xs"><i class="fa fa-pencil"></i></button>
@@ -473,7 +763,7 @@
                               </div>
 
                               <div class=" add-task-row">
-                                  <!--<button class="btn btn-primary btn-addon btn-sm" data-toggle="modal" data-target="#newteam">
+                                  <button class="btn btn-primary btn-addon btn-sm" data-toggle="modal" data-target="#newteam">
                                         <i class="fa fa-plus"></i>
                                         Add Tasks
                                     </button>
@@ -481,14 +771,14 @@
                                              <div id="newteam" class="modal fade in" role="dialog">
                                                 <div class="modal-dialog">
             
-                                             Modal content
+                                            <!-- Modal content-->
                                             <div class="modal-content row">
                                                 <div class="modal-header custom-modal-header">
                                                     <button type="button" class="close" data-dismiss="modal">×</button>
                                                     <h4 class="modal-title">Task Details</h4>
                                                 </div>
                                                 <div class="modal-body">
-                                                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/loadtemplate/addtask" method="post">
+                                                    <form name="info_form" class="form-inline" action="<?php echo base_url();?>index.php/copy/addtask" method="post">
 
                                                         <div class="form-group col-sm-12">
                                                             <input type="text" class="form-control" name="action" id="name" placeholder="Enter duty">
@@ -513,14 +803,16 @@
                                         </div>
     
                                   <a class="btn btn-default btn-sm pull-right" href="#">See All Tasks</a>
-                              </div>-->
+                              </div>
                           </div>
                       </section>
                   </div>
               </div>
               <!-- row end -->
                 </section><!-- /.content -->
-              
+                <div class="footer-main">
+                    Copyright &copy Director, 2014
+                </div>
             </aside><!-- /.right-side -->
 
         </div><!-- ./wrapper -->

@@ -6,7 +6,7 @@ class core extends CI_Controller
 
 	}
 
-	public function getview($usid)
+	public function getview()
 	{
        $this->load->model('core_model');
        $data=$this->core_model->gethead();
@@ -80,8 +80,14 @@ class core extends CI_Controller
                 redirect('index.php/core/registration');
             }
         }
+
     }
 
+
+  public function headtask()
+  {
+    
+  }
 
 
 

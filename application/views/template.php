@@ -50,8 +50,8 @@
       <?php echo $this->session->flashdata('verify_message');?>
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="<?php echo base_url();?>index.php/loadtemplate/" class="logo">
-               Head
+            <a href="#" class="logo">
+               Marketing
                </a>
             <!-- Header Navbar: style can be found in header.less -->
             <nav class="navbar navbar-static-top" role="navigation">
@@ -71,6 +71,7 @@
                         </div>
                     </nav>
                 </header>
+                
                 <div class="wrapper row-offcanvas row-offcanvas-left">
                     <!-- Left side column. contains the logo and sidebar -->
                     <aside class="left-side sidebar-offcanvas">
@@ -84,7 +85,7 @@
                                 <div class="pull-left info">
                                     
 
-                                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                                    <a href="#"><i class="fa fa-circle text-success"></i> Head</a>
                                 </div>
                             </div>
                             
@@ -95,6 +96,7 @@
                                         <i class="fa fa-dashboard"></i> <span>Home</span>
                                     </a>
                                 </li>
+                                
                                 <li>
                                     <a href="<?php echo base_url();?>index.php/loadtemplate/loadcompanylist">
                                         <i class="fa fa-globe"></i> <span>Company list</span>
@@ -120,7 +122,7 @@
                                               </div>
                                               <div class="modal-body">
 
-                                                  <form role="form" action="<?php echo base_url();?>index.php/loadtemplate/company_reg/" method="post">
+                                                  <form role="form" action="<?php echo base_url();?>index.php/loadtemplate/company_reg/<?php echo $data->id;?>" method="post">
 
                                                   <div class="form-group">
                                                           <label>Company Name</label>
@@ -441,6 +443,7 @@
                                  foreach($data as $obj): ?>
                                     <li class="list-group-item">
                                         <!--<a href=""><img src="img/26115.jpg" width="50" height="50"></a>-->
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
                                        <!-- <span class="pull-right label label-danger inline m-t-15"></span>-->
                                         <a href=""><?php echo $obj->username ;?></a>
                                     </li>

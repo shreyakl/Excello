@@ -30,16 +30,16 @@
 
 
 
-       public function companylist_vol()
+       public function companylist_vol($userid)
        {
         
        	$this->load->model('vol_list');
-       	$data=$this->vol_list->getlist(4);
+       	$data=$this->vol_list->getlist($userid);
        $this->session->set_userdata('companylist',$data);
        	$this->load->view('companylistview_vol');
        }
 
-  public function company_reg()
+  public function company_reg($usid)
   {
     
         $this->load->model('company_model');
@@ -83,7 +83,7 @@
                     $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
                     redirect('welcome/registration');
                 }*/
-                redirect('index.php/marketing/getview');
+                redirect('index.php/marketing/getview/'.$usid);
             }
             else
             {
